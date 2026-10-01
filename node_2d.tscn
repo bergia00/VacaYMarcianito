@@ -68,13 +68,13 @@ texture = ExtResource("2_0hol4")
 script = ExtResource("6_rj586")
 zoom = Vector2(1.08, 1.08)
 tween_resource = SubResource("Resource_ir8iy")
-host_layers = 2
 metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 
 [node name="CameraBig" type="Camera2D" parent="." unique_id=862537631]
 physics_interpolation_mode = 1
 top_level = true
-position = Vector2(500, 300)
+position = Vector2(200, 300)
+zoom = Vector2(1.08, 1.08)
 
 [node name="PCHBig" type="Node" parent="CameraBig" unique_id=1610042072]
 process_priority = 300
