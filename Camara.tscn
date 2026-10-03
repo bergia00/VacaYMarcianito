@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://4gpqe5124hpr"]
+
+[node name="Camara" type="Camera2D" unique_id=1866777942]
+physics_interpolation_mode = 1
+top_level = true
+zoom = Vector2(1.08, 1.08)

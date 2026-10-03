@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://bxa6867hn1hh6"]
+
+[ext_resource type="Script" uid="uid://4urhcwy3ao0w" path="res://marcianito.gd" id="1_kfsrj"]
+[ext_resource type="Texture2D" uid="uid://dudo3q4e3pcc3" path="res://MarcianitoBoceto.png" id="2_kfsrj"]
+[ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="3_mhgwd"]
+[ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="4_0ay5y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1nmvi"]
+size = Vector2(14.502165, 24.891777)
+
+[sub_resource type="Resource" id="Resource_ir8iy"]
+script = ExtResource("4_0ay5y")
+
+[node name="Marcianito" type="CharacterBody2D" unique_id=788434798]
+script = ExtResource("1_kfsrj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=752777422]
+position = Vector2(2.5, 3.499997)
+scale = Vector2(4.62, 4.62)
+shape = SubResource("RectangleShape2D_1nmvi")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=399947937]
+scale = Vector2(0.543, 0.543)
+texture = ExtResource("2_kfsrj")
+
+[node name="PCMarcianito" type="Node2D" parent="." unique_id=70572793]
+script = ExtResource("3_mhgwd")
+zoom = Vector2(1.7, 1.7)
+tween_resource = SubResource("Resource_ir8iy")
+metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
