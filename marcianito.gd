@@ -14,6 +14,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		SPEED = 300
 		get_node("PCMarcianito").set_priority(1)
+		
 func AlternarIdle():
 	if estaIdle == true:
 		estaIdle = false

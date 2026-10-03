@@ -10,6 +10,8 @@ size = Vector2(14.502165, 24.891777)
 
 [sub_resource type="Resource" id="Resource_ir8iy"]
 script = ExtResource("4_0ay5y")
+transition = 8
+ease = 1
 
 [node name="Marcianito" type="CharacterBody2D" unique_id=788434798]
 script = ExtResource("1_kfsrj")
@@ -25,6 +27,6 @@ texture = ExtResource("2_kfsrj")
 
 [node name="PCMarcianito" type="Node2D" parent="." unique_id=70572793]
 script = ExtResource("3_mhgwd")
-zoom = Vector2(1.7, 1.7)
+zoom = Vector2(2.22, 2.22)
 tween_resource = SubResource("Resource_ir8iy")
 metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
