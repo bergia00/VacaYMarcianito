@@ -3,7 +3,7 @@ var estaIdle = true
 var SPEED = 300.0
 
 func _physics_process(delta: float) -> void:
-	var direction := Input.get_vector("V_Izquierda", "V_Derecha", "V_Arriba", "V_Abajo")
+	var direction := Input.get_vector("Izquierda", "Derecha", "Arriba", "Abajo")
 	velocity = direction * SPEED
 	move_and_slide()
 	if Input.is_action_just_pressed("Cambiar"):
