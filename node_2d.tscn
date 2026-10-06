@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bxa6867hn1hh6" path="res://Marcianito.tscn" id="3_q6r6c"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="4_0hol4"]
 [ext_resource type="PackedScene" uid="uid://bhefatkxb8ywo" path="res://Vaca.tscn" id="4_kdubu"]
+[ext_resource type="TileSet" uid="uid://t5a4fh2skhph" path="res://new_tile_set.tres" id="5_q6r6c"]
 
 [node name="Node2D" type="Node2D" unique_id=1900721739]
 
@@ -25,9 +26,13 @@ physics_interpolation_mode = 1
 top_level = true
 position = Vector2(271, 366)
 scale = Vector2(0.465, 0.465)
+zoom = Vector2(1.7, 1.7)
 
 [node name="PhantomCameraHost" type="Node" parent="Camera2D" unique_id=1715832362]
 process_priority = 300
 process_physics_priority = 300
 script = ExtResource("4_0hol4")
 metadata/_custom_type_script = "uid://bd046eokvcnu2"
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=906399261]
+tile_set = ExtResource("5_q6r6c")
