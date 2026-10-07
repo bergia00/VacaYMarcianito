@@ -1,6 +1,6 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1791252192
-arboles_tile_set.tres::TileSet::2976149089470970265::1791251498::0::1::::<><><>0<>0<><>::uid://7ikxsol544gx::::res://Trees.png
+::res://::1791337563
+arboles_tile_set.tres::TileSet::2976149089470970265::1791335923::0::1::::<><><>0<>0<><>::uid://7ikxsol544gx::::res://Trees.png
 Camara.tscn::PackedScene::2048802317277356675::1791250219::0::1::::<><><>0<>0<><>::
 Cow.webp::CompressedTexture2D::3691724458501612801::1791250219::1791250985::1::::<><><>0<>0<>2c3d4534a3b75bf67a7c08c21bb1a463<>res://.godot/imported/Cow.webp-ade72b1606c11e22014905233153e44c.ctex::
 export_presets.cfg::TextFile::-1::1791250219::0::1::::<><><>0<>0<><>::
@@ -10,8 +10,8 @@ Mapa1.tscn::PackedScene::2134564039540553649::1791250219::0::1::::<><><>0<>0<><>
 marcianito.gd::GDScript::2077808850178780896::1791250219::0::1::::<>CharacterBody2D<><>0<>0<><>::
 Marcianito.tscn::PackedScene::4002706923336514217::1791250219::0::1::::<><><>0<>0<><>::uid://4urhcwy3ao0w::::res://marcianito.gd<>uid://dudo3q4e3pcc3::::res://MarcianitoBoceto.png<>uid://bhexx6mj1xv3q::::res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd<>uid://8umksf8e80fw::::res://addons/phantom_camera/scripts/resources/tween_resource.gd
 MarcianitoBoceto.png::CompressedTexture2D::8570132982622879200::1791250219::1791250985::1::::<><><>0<>0<>b8e509339c84990f84ba473a3e2e5fc8<>res://.godot/imported/MarcianitoBoceto.png-4c7945c2b57725ba5175f114ab9910b2.ctex::
-new_tile_set.tres::TileSet::1395571424449244337::1791251498::0::1::::<><><>0<>0<><>::uid://b7lnf1kp5ke4l::::res://TileSet.png
-node_2d.tscn::PackedScene::897982065643046994::1791251498::0::1::::<><><>0<>0<><>::uid://5n87tka4cwld::::res://Mapa1.tscn<>uid://bxa6867hn1hh6::::res://Marcianito.tscn<>uid://bd046eokvcnu2::::res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd<>uid://bhefatkxb8ywo::::res://Vaca.tscn<>uid://t5a4fh2skhph::::res://new_tile_set.tres
+new_tile_set.tres::TileSet::1395571424449244337::1791335923::0::1::::<><><>0<>0<><>::uid://b7lnf1kp5ke4l::::res://TileSet.png
+node_2d.tscn::PackedScene::897982065643046994::1791336314::0::1::::<><><>0<>0<><>::uid://5n87tka4cwld::::res://Mapa1.tscn<>uid://bxa6867hn1hh6::::res://Marcianito.tscn<>uid://bd046eokvcnu2::::res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd<>uid://bhefatkxb8ywo::::res://Vaca.tscn<>uid://t5a4fh2skhph::::res://new_tile_set.tres
 TileSet.png::CompressedTexture2D::4655971467057451397::1791250219::1791250985::1::::<><><>0<>0<>c0f9be86e6869336bb2212f11d9234d5<>res://.godot/imported/TileSet.png-9c726bff3df19406d8ad21e114830a42.ctex::
 top_7_marcianoscaptadosenacamara.gd::GDScript::5819235978119230054::1791250219::0::1::::<>Camera2D<><>0<>0<><>::
 Trees.png::CompressedTexture2D::2263207229225609471::1791250219::1791250985::1::::<><><>0<>0<>c4b1d157fc0b397ef38d79cbf6926581<>res://.godot/imported/Trees.png-da4216266dc7b3097fe3ca96dd2c74f3.ctex::
@@ -164,8 +164,8 @@ phantom_camera_noise_2d.gd::GDScript::7746826514819894941::1791250219::0::1::::P
 phantom_camera_noise_3d.gd::GDScript::6187281538235516492::1791250219::0::1::::PhantomCameraNoise3D<>Resource<>res://addons/phantom_camera/icons/phantom_camera_noise_resource.svg<>0<>1<><>::
 tween_director_resource.gd::GDScript::1896363988711138719::1791250219::0::1::::TweenDirectorResource<>Resource<>res://addons/phantom_camera/icons/phantom_camera_tween_director_resource.svg<>0<>1<><>::
 tween_resource.gd::GDScript::2358266811638875852::1791250219::0::1::::PhantomCameraTween<>Resource<>res://addons/phantom_camera/icons/phantom_camera_tween.svg<>0<>0<><>::
-::res://addons/phantom_camera/themes/::1791251498
+::res://addons/phantom_camera/themes/::1791335923
 button_focus.tres::StyleBoxFlat::1106322926052085743::1791250219::0::1::::<><><>0<>0<><>::
 button_hover.tres::StyleBoxFlat::2151354179275418664::1791250219::0::1::::<><><>0<>0<><>::
 button_normal.tres::StyleBoxFlat::2549607310371774247::1791250219::0::1::::<><><>0<>0<><>::
-theme.tres::Theme::2909626652912860453::1791251498::0::1::::<><><>0<>0<><>::uid://dve7mgsjik4dg::::res://addons/phantom_camera/fonts/Nunito-Regular.ttf<>uid://5weqvkjsfso3::::res://addons/phantom_camera/themes/button_hover.tres<>uid://bclbwo3xrdat0::::res://addons/phantom_camera/themes/button_normal.tres
+theme.tres::Theme::2909626652912860453::1791335923::0::1::::<><><>0<>0<><>::uid://dve7mgsjik4dg::::res://addons/phantom_camera/fonts/Nunito-Regular.ttf<>uid://5weqvkjsfso3::::res://addons/phantom_camera/themes/button_hover.tres<>uid://bclbwo3xrdat0::::res://addons/phantom_camera/themes/button_normal.tres
