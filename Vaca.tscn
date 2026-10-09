@@ -21,6 +21,19 @@ ease = 1
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
 animations = [{
+"frames": [],
+"loop": 1,
+"name": &"CaminataAbajo",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_rhoib")
+}],
+"loop": 1,
+"name": &"CaminataArriba",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 12.0,
 "texture": ExtResource("4_rhoib")
@@ -55,6 +68,19 @@ animations = [{
 "loop": 1,
 "name": &"CaminataCostado",
 "speed": 24.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"IdleAbajo",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_rhoib")
+}],
+"loop": 1,
+"name": &"IdleArriba",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 48.0,
@@ -150,10 +176,8 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1230141011]
 sprite_frames = SubResource("SpriteFrames_g4v7s")
-animation = &"CaminataCostado"
+animation = &"IdleAbajo"
 autoplay = "IdleCostado"
-frame = 9
-frame_progress = 0.91927946
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=547048538]
 position = Vector2(0, 11)
