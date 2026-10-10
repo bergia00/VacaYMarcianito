@@ -4,6 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://bxa6867hn1hh6" path="res://Marcianito.tscn" id="3_q6r6c"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="4_0hol4"]
 [ext_resource type="PackedScene" uid="uid://bhefatkxb8ywo" path="res://Vaca.tscn" id="4_kdubu"]
+[ext_resource type="PackedScene" uid="uid://coufm7ul7l0uw" path="res://salida.tscn" id="5_kdubu"]
+[ext_resource type="Script" uid="uid://cj7twntibrlk4" path="res://salida.gd" id="6_d21ai"]
 
 [node name="Node2D" type="Node2D" unique_id=1900721739]
 position = Vector2(0, -2)
@@ -12,14 +14,17 @@ position = Vector2(0, -2)
 
 [node name="Marcianito" parent="." unique_id=788434798 instance=ExtResource("3_q6r6c")]
 z_index = 6
-position = Vector2(755, 334)
+position = Vector2(772.64, 334)
 scale = Vector2(0.56, 0.56)
+collision_mask = 12
 motion_mode = 1
 
 [node name="Vaca" parent="." unique_id=1966402237 instance=ExtResource("4_kdubu")]
 z_index = 3
 position = Vector2(271, 366)
 scale = Vector2(0.465, 0.465)
+collision_layer = 2
+collision_mask = 12
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1270818476]
 physics_interpolation_mode = 1
@@ -33,3 +38,6 @@ process_priority = 300
 process_physics_priority = 300
 script = ExtResource("4_0hol4")
 metadata/_custom_type_script = "uid://bd046eokvcnu2"
+
+[node name="Salida" parent="." unique_id=275230678 instance=ExtResource("5_kdubu")]
+script = ExtResource("6_d21ai")

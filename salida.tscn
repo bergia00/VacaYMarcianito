@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://coufm7ul7l0uw"]
+
+[ext_resource type="Script" uid="uid://cj7twntibrlk4" path="res://salida.gd" id="1_0xb47"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dd11d"]
+size = Vector2(1171.4286, 142.85687)
+
+[node name="Salida" type="Area2D" unique_id=275230678]
+scale = Vector2(0.56, 0.56)
+collision_layer = 8
+collision_mask = 3
+script = ExtResource("1_0xb47")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=278564061]
+z_index = 2
+position = Vector2(1099.9999, 1717.857)
+shape = SubResource("RectangleShape2D_dd11d")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
