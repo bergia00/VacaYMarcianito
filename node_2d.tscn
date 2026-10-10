@@ -1,14 +1,15 @@
 [gd_scene format=3 uid="uid://m18vsidyrup3"]
 
+[ext_resource type="Script" uid="uid://c3k0m0pmh76us" path="res://node_2d.gd" id="1_kdubu"]
 [ext_resource type="PackedScene" uid="uid://c7m5vou1rittf" path="res://mapa_2.tscn" id="1_q6r6c"]
 [ext_resource type="PackedScene" uid="uid://bxa6867hn1hh6" path="res://Marcianito.tscn" id="3_q6r6c"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="4_0hol4"]
 [ext_resource type="PackedScene" uid="uid://bhefatkxb8ywo" path="res://Vaca.tscn" id="4_kdubu"]
 [ext_resource type="PackedScene" uid="uid://coufm7ul7l0uw" path="res://salida.tscn" id="5_kdubu"]
-[ext_resource type="Script" uid="uid://cj7twntibrlk4" path="res://salida.gd" id="6_d21ai"]
 
 [node name="Node2D" type="Node2D" unique_id=1900721739]
 position = Vector2(0, -2)
+script = ExtResource("1_kdubu")
 
 [node name="Mapa2" parent="." unique_id=683148234 instance=ExtResource("1_q6r6c")]
 
@@ -40,4 +41,16 @@ script = ExtResource("4_0hol4")
 metadata/_custom_type_script = "uid://bd046eokvcnu2"
 
 [node name="Salida" parent="." unique_id=275230678 instance=ExtResource("5_kdubu")]
-script = ExtResource("6_d21ai")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1190631033]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=464309966]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+
+[connection signal="Victoria" from="Salida" to="." method="_on_salida_victoria"]

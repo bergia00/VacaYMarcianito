@@ -4,8 +4,7 @@ var CantidAdentro = 0
 
 func _process(delta: float) -> void:
 	if CantidAdentro == 2:
-		print("ganaste")
-	print(CantidAdentro)
+		emit_signal("Victoria")
 func _on_body_entered(body: Node2D) -> void:
 	CantidAdentro += 1
 	
