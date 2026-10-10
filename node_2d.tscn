@@ -1,106 +1,35 @@
-[gd_scene format=3 uid="uid://bdmx5b4xmenhy"]
+[gd_scene format=3 uid="uid://m18vsidyrup3"]
 
-[ext_resource type="Script" uid="uid://4urhcwy3ao0w" path="res://marcianito.gd" id="1_epypp"]
-[ext_resource type="Texture2D" uid="uid://o6033n0ik0qc" path="res://xfg0j1nu28ce1.png" id="1_rj586"]
-[ext_resource type="Texture2D" uid="uid://byxlecjqkj8qf" path="res://Girdog.webp" id="2_0hol4"]
-[ext_resource type="Script" uid="uid://c4rfnc7piwgaa" path="res://vaca.gd" id="3_0hol4"]
-[ext_resource type="Texture2D" uid="uid://bsukfr2qi56cr" path="res://Cow.webp" id="3_q6r6c"]
-[ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="5_d21ai"]
-[ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="6_rj586"]
-[ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="7_4d7sh"]
+[ext_resource type="PackedScene" uid="uid://c7m5vou1rittf" path="res://mapa_2.tscn" id="1_q6r6c"]
+[ext_resource type="PackedScene" uid="uid://bxa6867hn1hh6" path="res://Marcianito.tscn" id="3_q6r6c"]
+[ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="4_0hol4"]
+[ext_resource type="PackedScene" uid="uid://bhefatkxb8ywo" path="res://Vaca.tscn" id="4_kdubu"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_c643d"]
-size = Vector2(16.88679, 20)
+[node name="Node2D" type="Node2D" unique_id=1900721739]
+position = Vector2(0, -2)
 
-[sub_resource type="Resource" id="Resource_rj586"]
-script = ExtResource("7_4d7sh")
-transition = 8
-ease = 1
+[node name="Mapa2" parent="." unique_id=683148234 instance=ExtResource("1_q6r6c")]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i3hjh"]
+[node name="Marcianito" parent="." unique_id=788434798 instance=ExtResource("3_q6r6c")]
+z_index = 6
+position = Vector2(755, 334)
+scale = Vector2(0.56, 0.56)
+motion_mode = 1
 
-[sub_resource type="Resource" id="Resource_ir8iy"]
-script = ExtResource("7_4d7sh")
+[node name="Vaca" parent="." unique_id=1966402237 instance=ExtResource("4_kdubu")]
+z_index = 3
+position = Vector2(271, 366)
+scale = Vector2(0.465, 0.465)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_dd11d"]
-viewport_path = NodePath("Sprite2D2/SubViewport")
-
-[node name="Node2D" type="Node2D" unique_id=818434080]
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=516180899]
-position = Vector2(579.6368, 333.50003)
-scale = Vector2(0.37428564, 0.37428567)
-texture = ExtResource("1_rj586")
-
-[node name="Vaca" type="CharacterBody2D" parent="." unique_id=886252242]
-position = Vector2(500, 300)
-script = ExtResource("3_0hol4")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Vaca" unique_id=1799721889]
-position = Vector2(1.5000305, 0)
-scale = Vector2(10.6, 10.6)
-shape = SubResource("RectangleShape2D_c643d")
-
-[node name="Sprite2D" type="Sprite2D" parent="Vaca" unique_id=842191321]
-scale = Vector2(0.288, 0.288)
-texture = ExtResource("3_q6r6c")
-
-[node name="PCVaca" type="Node2D" parent="Vaca" unique_id=721917569]
-script = ExtResource("6_rj586")
-tween_resource = SubResource("Resource_rj586")
-tween_on_load = false
-metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
-
-[node name="Marcianito" type="CharacterBody2D" parent="." unique_id=174824979]
-position = Vector2(200, 300)
-script = ExtResource("1_epypp")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Marcianito" unique_id=890518937]
-position = Vector2(0, 6.745)
-scale = Vector2(4.62, 4.62)
-shape = SubResource("CapsuleShape2D_i3hjh")
-
-[node name="Sprite2D" type="Sprite2D" parent="Marcianito" unique_id=1018334051]
-scale = Vector2(0.32333332, 0.32333332)
-texture = ExtResource("2_0hol4")
-
-[node name="PCMarcianito" type="Node2D" parent="Marcianito" unique_id=1023842332]
-script = ExtResource("6_rj586")
-zoom = Vector2(1.08, 1.08)
-tween_resource = SubResource("Resource_ir8iy")
-metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
-
-[node name="CameraBig" type="Camera2D" parent="." unique_id=862537631]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1270818476]
 physics_interpolation_mode = 1
 top_level = true
-position = Vector2(200, 300)
-zoom = Vector2(1.08, 1.08)
+position = Vector2(271, 364)
+scale = Vector2(0.465, 0.465)
+zoom = Vector2(1.7, 1.7)
 
-[node name="PCHBig" type="Node" parent="CameraBig" unique_id=1610042072]
+[node name="PhantomCameraHost" type="Node" parent="Camera2D" unique_id=1715832362]
 process_priority = 300
 process_physics_priority = 300
-script = ExtResource("5_d21ai")
-metadata/_custom_type_script = "uid://bd046eokvcnu2"
-
-[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=684554136]
-z_index = 4
-position = Vector2(163, 98)
-texture = SubResource("ViewportTexture_dd11d")
-
-[node name="SubViewport" type="SubViewport" parent="Sprite2D2" unique_id=1784882613]
-handle_input_locally = false
-size = Vector2i(339, 198)
-view_count = 2
-
-[node name="CameraSmall" type="Camera2D" parent="Sprite2D2/SubViewport" unique_id=1262278631]
-physics_interpolation_mode = 1
-top_level = true
-position = Vector2(200, 300)
-zoom = Vector2(1.08, 1.08)
-
-[node name="PCHSmall" type="Node" parent="Sprite2D2/SubViewport/CameraSmall" unique_id=150150267]
-process_priority = 300
-process_physics_priority = 300
-script = ExtResource("5_d21ai")
-host_layers = 2
+script = ExtResource("4_0hol4")
 metadata/_custom_type_script = "uid://bd046eokvcnu2"

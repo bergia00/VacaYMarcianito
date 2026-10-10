@@ -1,0 +1,185 @@
+[gd_scene format=3 uid="uid://bhefatkxb8ywo"]
+
+[ext_resource type="Script" uid="uid://c4rfnc7piwgaa" path="res://vaca.gd" id="1_bjl2m"]
+[ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="3_jerhe"]
+[ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="4_jrm4b"]
+[ext_resource type="Texture2D" uid="uid://cidijv8pjs3hg" path="res://Animación/Vaca/Vaca.png" id="4_rhoib"]
+[ext_resource type="Texture2D" uid="uid://cy7vhllv4co33" path="res://Animación/Vaca/walk vaca2.png" id="5_xa0l4"]
+[ext_resource type="Texture2D" uid="uid://c1n4to8yumltk" path="res://Animación/Vaca/walk vaca3.png" id="6_lbhsu"]
+[ext_resource type="Texture2D" uid="uid://bd4kf430rylr0" path="res://Animación/Vaca/walk vaca4.png" id="7_iprrw"]
+[ext_resource type="Texture2D" uid="uid://djq5g2cpfw3g3" path="res://Animación/Vaca/walk vaca5.png" id="8_t07yb"]
+[ext_resource type="Texture2D" uid="uid://sns2fmky3mkr" path="res://Animación/Vaca/Idle Vaca2.png" id="9_opp13"]
+[ext_resource type="Texture2D" uid="uid://21ee6w7lxvow" path="res://Animación/Vaca/Idle Vaca3.png" id="10_3u7j1"]
+[ext_resource type="Texture2D" uid="uid://b0au0ahciyup2" path="res://Animación/Vaca/Idle Vaca4.png" id="11_i4nhy"]
+[ext_resource type="Texture2D" uid="uid://qxqu54a38i10" path="res://Animación/Vaca/Idle Vaca6.png" id="12_duxok"]
+[ext_resource type="Texture2D" uid="uid://v8vjyjqtp804" path="res://Animación/Vaca/Idle Vaca7.png" id="13_s5qe6"]
+
+[sub_resource type="Resource" id="Resource_rj586"]
+script = ExtResource("4_jrm4b")
+transition = 8
+ease = 1
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
+animations = [{
+"frames": [],
+"loop": 1,
+"name": &"CaminataAbajo",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_rhoib")
+}],
+"loop": 1,
+"name": &"CaminataArriba",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 12.0,
+"texture": ExtResource("4_rhoib")
+}, {
+"duration": 12.0,
+"texture": ExtResource("5_xa0l4")
+}, {
+"duration": 12.0,
+"texture": ExtResource("4_rhoib")
+}, {
+"duration": 12.0,
+"texture": ExtResource("6_lbhsu")
+}, {
+"duration": 12.0,
+"texture": ExtResource("4_rhoib")
+}, {
+"duration": 12.0,
+"texture": ExtResource("5_xa0l4")
+}, {
+"duration": 5.0,
+"texture": ExtResource("7_iprrw")
+}, {
+"duration": 2.0,
+"texture": ExtResource("8_t07yb")
+}, {
+"duration": 5.0,
+"texture": ExtResource("7_iprrw")
+}, {
+"duration": 12.0,
+"texture": ExtResource("6_lbhsu")
+}],
+"loop": 1,
+"name": &"CaminataCostado",
+"speed": 24.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"IdleAbajo",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_rhoib")
+}],
+"loop": 1,
+"name": &"IdleArriba",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 48.0,
+"texture": ExtResource("4_rhoib")
+}, {
+"duration": 4.0,
+"texture": ExtResource("9_opp13")
+}, {
+"duration": 4.0,
+"texture": ExtResource("10_3u7j1")
+}, {
+"duration": 4.0,
+"texture": ExtResource("9_opp13")
+}, {
+"duration": 12.0,
+"texture": ExtResource("4_rhoib")
+}, {
+"duration": 5.0,
+"texture": ExtResource("7_iprrw")
+}, {
+"duration": 2.0,
+"texture": ExtResource("8_t07yb")
+}, {
+"duration": 5.0,
+"texture": ExtResource("7_iprrw")
+}, {
+"duration": 24.0,
+"texture": ExtResource("4_rhoib")
+}, {
+"duration": 4.0,
+"texture": ExtResource("9_opp13")
+}, {
+"duration": 4.0,
+"texture": ExtResource("10_3u7j1")
+}, {
+"duration": 4.0,
+"texture": ExtResource("9_opp13")
+}, {
+"duration": 6.0,
+"texture": ExtResource("11_i4nhy")
+}, {
+"duration": 4.0,
+"texture": ExtResource("12_duxok")
+}, {
+"duration": 28.0,
+"texture": ExtResource("13_s5qe6")
+}, {
+"duration": 4.0,
+"texture": ExtResource("12_duxok")
+}, {
+"duration": 6.0,
+"texture": ExtResource("11_i4nhy")
+}, {
+"duration": 4.0,
+"texture": ExtResource("9_opp13")
+}, {
+"duration": 4.0,
+"texture": ExtResource("10_3u7j1")
+}, {
+"duration": 4.0,
+"texture": ExtResource("9_opp13")
+}, {
+"duration": 12.0,
+"texture": ExtResource("4_rhoib")
+}, {
+"duration": 5.0,
+"texture": ExtResource("7_iprrw")
+}, {
+"duration": 2.0,
+"texture": ExtResource("8_t07yb")
+}, {
+"duration": 5.0,
+"texture": ExtResource("7_iprrw")
+}],
+"loop": 1,
+"name": &"IdleCostado",
+"speed": 24.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yf5fn"]
+radius = 40.0
+height = 148.0
+
+[node name="Vaca" type="CharacterBody2D" unique_id=1966402237]
+script = ExtResource("1_bjl2m")
+
+[node name="PCVaca" type="Node2D" parent="." unique_id=1619731117]
+script = ExtResource("3_jerhe")
+zoom = Vector2(1.7, 1.7)
+tween_resource = SubResource("Resource_rj586")
+tween_on_load = false
+metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1230141011]
+sprite_frames = SubResource("SpriteFrames_g4v7s")
+animation = &"IdleAbajo"
+autoplay = "IdleCostado"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=547048538]
+position = Vector2(0, 11)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_yf5fn")

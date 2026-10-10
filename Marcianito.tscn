@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://bxa6867hn1hh6"]
+
+[ext_resource type="Script" uid="uid://4urhcwy3ao0w" path="res://marcianito.gd" id="1_kfsrj"]
+[ext_resource type="Texture2D" uid="uid://lr4j04n3h2wr" path="res://Animación/Marcianito/Marcianito.png" id="2_pphqq"]
+[ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="3_mhgwd"]
+[ext_resource type="Texture2D" uid="uid://6nvqvdpgbsho" path="res://Animación/Marcianito/Marcianito3.png" id="3_pphqq"]
+[ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="4_0ay5y"]
+[ext_resource type="Texture2D" uid="uid://c5ktdlk5y2237" path="res://Animación/Marcianito/Marcianito4.png" id="4_pl6b0"]
+[ext_resource type="Texture2D" uid="uid://bxyttg2dkg75o" path="res://Animación/Marcianito/Marcianito1.png" id="5_7lxer"]
+[ext_resource type="Texture2D" uid="uid://dp4p4pt33ma1x" path="res://Animación/Marcianito/Marcianito2.png" id="6_rdha2"]
+[ext_resource type="Texture2D" uid="uid://brkyplh7je6q3" path="res://Animación/Marcianito/Marcianitoidle.png" id="7_7lxer"]
+[ext_resource type="Texture2D" uid="uid://by2lfmtv6boc2" path="res://Animación/Marcianito/Marcianitoidle1.png" id="8_rdha2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1nmvi"]
+size = Vector2(7.168832, 19.555557)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
+animations = [{
+"frames": [{
+"duration": 12.0,
+"texture": ExtResource("2_pphqq")
+}, {
+"duration": 12.0,
+"texture": ExtResource("3_pphqq")
+}, {
+"duration": 12.0,
+"texture": ExtResource("2_pphqq")
+}, {
+"duration": 12.0,
+"texture": ExtResource("4_pl6b0")
+}, {
+"duration": 5.0,
+"texture": ExtResource("5_7lxer")
+}, {
+"duration": 2.0,
+"texture": ExtResource("6_rdha2")
+}, {
+"duration": 5.0,
+"texture": ExtResource("5_7lxer")
+}, {
+"duration": 12.0,
+"texture": ExtResource("3_pphqq")
+}, {
+"duration": 12.0,
+"texture": ExtResource("2_pphqq")
+}, {
+"duration": 12.0,
+"texture": ExtResource("4_pl6b0")
+}],
+"loop": 1,
+"name": &"CaminataCostadoMarciano",
+"speed": 48.0
+}, {
+"frames": [{
+"duration": 12.0,
+"texture": ExtResource("2_pphqq")
+}, {
+"duration": 12.0,
+"texture": ExtResource("7_7lxer")
+}, {
+"duration": 12.0,
+"texture": ExtResource("8_rdha2")
+}, {
+"duration": 12.0,
+"texture": ExtResource("7_7lxer")
+}, {
+"duration": 5.0,
+"texture": ExtResource("5_7lxer")
+}, {
+"duration": 2.0,
+"texture": ExtResource("6_rdha2")
+}, {
+"duration": 5.0,
+"texture": ExtResource("5_7lxer")
+}],
+"loop": 1,
+"name": &"IdleCostadoMarciano",
+"speed": 48.0
+}]
+
+[sub_resource type="Resource" id="Resource_ir8iy"]
+script = ExtResource("4_0ay5y")
+
+[node name="Marcianito" type="CharacterBody2D" unique_id=788434798]
+script = ExtResource("1_kfsrj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=752777422]
+position = Vector2(3.4545455, 12.000002)
+scale = Vector2(3.5, 4.5)
+shape = SubResource("RectangleShape2D_1nmvi")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1015881917]
+scale = Vector2(0.5915, 0.5915)
+sprite_frames = SubResource("SpriteFrames_g4v7s")
+animation = &"IdleCostadoMarciano"
+
+[node name="PCMarcianito" type="Node2D" parent="." unique_id=70572793]
+script = ExtResource("3_mhgwd")
+zoom = Vector2(2.245, 2.245)
+tween_resource = SubResource("Resource_ir8iy")
+metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
