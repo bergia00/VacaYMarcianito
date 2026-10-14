@@ -5,10 +5,17 @@
 [ext_resource type="PackedScene" uid="uid://bxa6867hn1hh6" path="res://Marcianito.tscn" id="3_q6r6c"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="4_0hol4"]
 [ext_resource type="PackedScene" uid="uid://bhefatkxb8ywo" path="res://Vaca.tscn" id="4_kdubu"]
+<<<<<<< Updated upstream
 [ext_resource type="Script" uid="uid://dmmljw6wgfyfs" path="res://area_2d.gd" id="6_d21ai"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dd11d"]
 size = Vector2(640, 104)
+=======
+[ext_resource type="PackedScene" uid="uid://ci4m6vqrauxml" path="res://boton.tscn" id="5_kdubu"]
+[ext_resource type="PackedScene" uid="uid://qctwjba5na7k" path="res://puerta.tscn" id="6_d21ai"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_8gvf5"]
+>>>>>>> Stashed changes
 
 [node name="Node2D" type="Node2D" unique_id=1900721739]
 position = Vector2(0, -2)
@@ -43,6 +50,7 @@ process_physics_priority = 300
 script = ExtResource("4_0hol4")
 metadata/_custom_type_script = "uid://bd046eokvcnu2"
 
+<<<<<<< Updated upstream
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1941009445]
 
 [node name="Label" type="Label" parent="CanvasLayer" unique_id=501139845]
@@ -68,3 +76,16 @@ shape = SubResource("RectangleShape2D_dd11d")
 [connection signal="Victoria" from="Area2D" to="." method="_on_area_2d_victoria"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
+=======
+[node name="Boton" parent="." unique_id=1564336467 instance=ExtResource("5_kdubu")]
+position = Vector2(536, 226)
+
+[node name="Puerta" parent="." unique_id=1553949359 instance=ExtResource("6_d21ai")]
+z_index = 2
+position = Vector2(832, 339.07)
+scale = Vector2(8.13, 1)
+physics_material_override = SubResource("PhysicsMaterial_8gvf5")
+
+[connection signal="Presionado" from="Boton" to="Puerta" method="_on_boton_presionado"]
+[connection signal="body_entered" from="Boton" to="Boton" method="_on_body_entered"]
+>>>>>>> Stashed changes
