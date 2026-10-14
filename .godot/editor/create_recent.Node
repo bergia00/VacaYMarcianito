@@ -1,7 +1,0 @@
-Label
-CanvasLayer
-CollisionShape2D
-Area2D
-AnimatedSprite2D
-TileMapLayer
-Node
