@@ -92,7 +92,7 @@ shape = SubResource("RectangleShape2D_1nmvi")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1015881917]
 scale = Vector2(0.5915, 0.5915)
 sprite_frames = SubResource("SpriteFrames_g4v7s")
-animation = &"IdleCostadoMarciano"
+animation = &"CaminataCostadoMarciano"
 
 [node name="PCMarcianito" type="Node2D" parent="." unique_id=70572793]
 script = ExtResource("3_mhgwd")
