@@ -1,12 +1,20 @@
 [gd_scene format=3 uid="uid://m18vsidyrup3"]
 
+[ext_resource type="Script" uid="uid://c3k0m0pmh76us" path="res://node_2d.gd" id="1_kdubu"]
 [ext_resource type="PackedScene" uid="uid://c7m5vou1rittf" path="res://mapa_2.tscn" id="1_q6r6c"]
 [ext_resource type="PackedScene" uid="uid://bxa6867hn1hh6" path="res://Marcianito.tscn" id="3_q6r6c"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="4_0hol4"]
 [ext_resource type="PackedScene" uid="uid://bhefatkxb8ywo" path="res://Vaca.tscn" id="4_kdubu"]
+[ext_resource type="Script" uid="uid://dmmljw6wgfyfs" path="res://area_2d.gd" id="6_d21ai"]
+[ext_resource type="PackedScene" uid="uid://ci4m6vqrauxml" path="res://boton.tscn" id="7_rj586"]
+[ext_resource type="PackedScene" uid="uid://qctwjba5na7k" path="res://puerta.tscn" id="8_4d7sh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dd11d"]
+size = Vector2(640, 104)
 
 [node name="Node2D" type="Node2D" unique_id=1900721739]
 position = Vector2(0, -2)
+script = ExtResource("1_kdubu")
 
 [node name="Mapa2" parent="." unique_id=683148234 instance=ExtResource("1_q6r6c")]
 
@@ -14,12 +22,15 @@ position = Vector2(0, -2)
 z_index = 6
 position = Vector2(400, 170)
 scale = Vector2(0.56, 0.56)
+collision_mask = 4
 motion_mode = 1
 
 [node name="Vaca" parent="." unique_id=1966402237 instance=ExtResource("4_kdubu")]
 z_index = 3
 position = Vector2(680.00006, 178.00002)
 scale = Vector2(0.465, 0.465)
+collision_layer = 2
+collision_mask = 4
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1270818476]
 physics_interpolation_mode = 1
@@ -33,3 +44,39 @@ process_priority = 300
 process_physics_priority = 300
 script = ExtResource("4_0hol4")
 metadata/_custom_type_script = "uid://bd046eokvcnu2"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1941009445]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=501139845]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+
+[node name="Area2D" type="Area2D" parent="." unique_id=260863787]
+position = Vector2(500, 500)
+collision_layer = 8
+collision_mask = 3
+script = ExtResource("6_d21ai")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1549812606]
+z_index = 2
+position = Vector2(100, 466)
+shape = SubResource("RectangleShape2D_dd11d")
+
+[node name="Boton" parent="." unique_id=1564336467 instance=ExtResource("7_rj586")]
+position = Vector2(554, 164)
+
+[node name="Puerta" parent="." unique_id=1553949359 instance=ExtResource("8_4d7sh")]
+z_index = 1
+position = Vector2(834.00006, 340)
+scale = Vector2(8.67, 1)
+
+[connection signal="Victoria" from="Area2D" to="." method="_on_area_2d_victoria"]
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
+[connection signal="Presionado" from="Boton" to="Puerta" method="_on_boton_presionado"]
+[connection signal="body_entered" from="Boton" to="Boton" method="_on_body_entered"]
