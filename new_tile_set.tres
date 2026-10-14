@@ -359,6 +359,14 @@ texture_region_size = Vector2i(32, 32)
 63:0/0 = 0
 63:1/0 = 0
 62:1/0 = 0
+42:0/0 = 0
+42:0/0/terrain_set = 2
+42:0/0/terrain = 0
+42:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+42:0/0/terrains_peering_bit/right_side = 0
+42:0/0/terrains_peering_bit/bottom_side = 0
+42:0/0/terrains_peering_bit/left_side = 0
+42:0/0/terrains_peering_bit/top_side = 0
 
 [resource]
 tile_size = Vector2i(32, 32)
@@ -372,4 +380,7 @@ terrain_set_1/terrain_0/name = "Cerca"
 terrain_set_1/terrain_0/color = Color(0.06221108, 0.41949213, 0.56959164, 1)
 terrain_set_1/terrain_1/name = "Piedra"
 terrain_set_1/terrain_1/color = Color(0, 0.5292054, 0.32522687, 1)
+terrain_set_2/mode = 2
+terrain_set_2/terrain_0/name = "Muro"
+terrain_set_2/terrain_0/color = Color(0.5568628, 0.49019608, 0, 1)
 sources/0 = SubResource("TileSetAtlasSource_wtcfe")
