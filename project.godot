@@ -83,6 +83,7 @@ AbajoMarciano={
 2d_physics/layer_2="Vaca"
 2d_physics/layer_3="Mapa"
 2d_physics/layer_4="Salida"
+2d_physics/layer_6="Boton"
 
 [physics]
 
