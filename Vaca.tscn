@@ -165,6 +165,9 @@ radius = 40.0
 height = 148.0
 
 [node name="Vaca" type="CharacterBody2D" unique_id=1966402237]
+collision_layer = 2
+collision_mask = 84
+motion_mode = 1
 script = ExtResource("1_bjl2m")
 
 [node name="PCVaca" type="Node2D" parent="." unique_id=1619731117]

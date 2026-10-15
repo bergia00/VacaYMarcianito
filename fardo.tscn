@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bf6ofx5j0k4bg"]
+
+[ext_resource type="Texture2D" uid="uid://dkt2y51uobsoi" path="res://Fardo.png" id="1_w6rdt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x03y8"]
+
+[node name="Fardo" type="RigidBody2D" unique_id=1185414360]
+z_index = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1736044996]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("1_w6rdt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1293958733]
+scale = Vector2(4, 4)
+shape = SubResource("RectangleShape2D_x03y8")
