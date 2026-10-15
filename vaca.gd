@@ -1,8 +1,13 @@
 extends CharacterBody2D
 var estaIdle = false
-var SPEED = 67.0
+var SPEED = 67
+var Empuje = 25
 
 func _physics_process(delta: float) -> void:
+	for i in get_slide_collision_count():
+		var c = get_slide_collision(i)
+		if c.get_collider() is RigidBody2D:
+			c.get_collider().apply_central_impulse(-c.get_normal() * Empuje)
 	if estaIdle == false:
 		Animar()
 		Mover()
@@ -39,13 +44,13 @@ func Animar():
 	if  Input.is_action_pressed("Arriba"):
 		$AnimatedSprite2D.play("CaminataArriba")
 		$AnimatedSprite2D.flip_h = false
-		$CollisionShape2D.rotation_degrees = 0
+		#$CollisionShape2D.rotation_degrees = 0
 	elif Input.is_action_just_released("Arriba"):
 			$AnimatedSprite2D.play("IdleArriba")
 	
 	if  Input.is_action_pressed("Abajo"):
 		$AnimatedSprite2D.play("CaminataAbajo")
 		$AnimatedSprite2D.flip_h = false
-		$CollisionShape2D.rotation_degrees = 0
+		#$CollisionShape2D.rotation_degrees = 0
 	elif Input.is_action_just_released("Abajo"):
 			$AnimatedSprite2D.play("IdleAbajo")
