@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://m18vsidyrup3"]
 
 [ext_resource type="Script" uid="uid://c3k0m0pmh76us" path="res://node_2d.gd" id="1_kdubu"]
+[ext_resource type="PackedScene" uid="uid://dwnrc2r0usfnx" path="res://mapa_3.tscn" id="2_ir8iy"]
 [ext_resource type="PackedScene" uid="uid://bxa6867hn1hh6" path="res://Marcianito.tscn" id="3_q6r6c"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="4_0hol4"]
 [ext_resource type="PackedScene" uid="uid://bhefatkxb8ywo" path="res://Vaca.tscn" id="4_kdubu"]
 [ext_resource type="Script" uid="uid://dmmljw6wgfyfs" path="res://area_2d.gd" id="6_d21ai"]
 [ext_resource type="PackedScene" uid="uid://ci4m6vqrauxml" path="res://boton.tscn" id="7_rj586"]
 [ext_resource type="PackedScene" uid="uid://qctwjba5na7k" path="res://puerta.tscn" id="8_4d7sh"]
-[ext_resource type="PackedScene" uid="uid://c7m5vou1rittf" path="res://Mapa2.tscn" id="8_rj586"]
 [ext_resource type="Script" uid="uid://dhait20c48ywg" path="res://boton2.gd" id="9_4d7sh"]
 [ext_resource type="PackedScene" uid="uid://bf6ofx5j0k4bg" path="res://fardo.tscn" id="10_ir8iy"]
 
@@ -21,7 +21,7 @@ rough = true
 position = Vector2(0, -2)
 script = ExtResource("1_kdubu")
 
-[node name="Mapa2" parent="." unique_id=683148234 instance=ExtResource("8_rj586")]
+[node name="Mapa3" parent="." unique_id=1586256040 instance=ExtResource("2_ir8iy")]
 
 [node name="Marcianito" parent="." unique_id=788434798 instance=ExtResource("3_q6r6c")]
 z_index = 3
