@@ -12,7 +12,6 @@
 [ext_resource type="Texture2D" uid="uid://di5mrnqsru7ej" path="res://Animación/Marcianito/Marcianito abajo1.png" id="5_1bbx0"]
 [ext_resource type="Texture2D" uid="uid://bxyttg2dkg75o" path="res://Animación/Marcianito/Marcianito1.png" id="5_7lxer"]
 [ext_resource type="Texture2D" uid="uid://dp4p4pt33ma1x" path="res://Animación/Marcianito/Marcianito2.png" id="6_rdha2"]
-<<<<<<< Updated upstream
 [ext_resource type="Texture2D" uid="uid://whownfjinhxr" path="res://Animación/Marcianito/Marcianito abajo2.png" id="6_wgqt2"]
 [ext_resource type="Texture2D" uid="uid://brkyplh7je6q3" path="res://Animación/Marcianito/Marcianitoidle.png" id="7_7lxer"]
 [ext_resource type="Texture2D" uid="uid://b1qkiwf6wbll6" path="res://Animación/Marcianito/Marcianito arriba.png" id="7_oxysp"]
@@ -23,17 +22,6 @@
 [ext_resource type="Texture2D" uid="uid://dkmdu7oqwsxb6" path="res://Animación/Marcianito/Marcianito abajo idle1.png" id="16_ckiep"]
 [ext_resource type="Texture2D" uid="uid://bs37glhiwpr5u" path="res://Animación/Marcianito/Marcianito arriba idle.png" id="17_vwnrk"]
 [ext_resource type="Texture2D" uid="uid://8sdiku8tts3x" path="res://Animación/Marcianito/Marcianito arriba idle1.png" id="18_c6wnt"]
-=======
-[ext_resource type="Texture2D" path="res://Animación/Marcianito/Marcianito abajo.png" id="7_7kjp6"]
-[ext_resource type="Texture2D" uid="uid://brkyplh7je6q3" path="res://Animación/Marcianito/Marcianitoidle.png" id="7_7lxer"]
-[ext_resource type="Texture2D" path="res://Animación/Marcianito/Marcianito abajo3.png" id="8_gxbmq"]
-[ext_resource type="Texture2D" uid="uid://by2lfmtv6boc2" path="res://Animación/Marcianito/Marcianitoidle1.png" id="8_rdha2"]
-[ext_resource type="Texture2D" path="res://Animación/Marcianito/Marcianito abajo4.png" id="9_ri0uo"]
-[ext_resource type="Texture2D" path="res://Animación/Marcianito/Marcianito abajo1.png" id="10_5vikf"]
-[ext_resource type="Texture2D" path="res://Animación/Marcianito/Marcianito abajo2.png" id="11_hyvnv"]
-[ext_resource type="Texture2D" path="res://Animación/Marcianito/Marcianito abajo idle.png" id="12_nhtn7"]
-[ext_resource type="Texture2D" path="res://Animación/Marcianito/Marcianito abajo idle1.png" id="13_dyai0"]
->>>>>>> Stashed changes
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1nmvi"]
 size = Vector2(7.168832, 19.555557)
@@ -126,7 +114,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 12.0,
-<<<<<<< Updated upstream
 "texture": ExtResource("2_nhtn7")
 }, {
 "duration": 12.0,
@@ -146,67 +133,6 @@ animations = [{
 }, {
 "duration": 5.0,
 "texture": ExtResource("5_1bbx0")
-=======
-"texture": ExtResource("7_7kjp6")
-}, {
-"duration": 12.0,
-"texture": ExtResource("8_gxbmq")
-}, {
-"duration": 12.0,
-"texture": ExtResource("7_7kjp6")
-}, {
-"duration": 12.0,
-"texture": ExtResource("9_ri0uo")
-}, {
-"duration": 5.0,
-"texture": ExtResource("10_5vikf")
-}, {
-"duration": 2.0,
-"texture": ExtResource("11_hyvnv")
-}, {
-"duration": 5.0,
-"texture": ExtResource("10_5vikf")
-}, {
-"duration": 12.0,
-"texture": ExtResource("8_gxbmq")
-}, {
-"duration": 12.0,
-"texture": ExtResource("7_7kjp6")
-}, {
-"duration": 12.0,
-"texture": ExtResource("9_ri0uo")
-}],
-"loop": 1,
-"name": &"CaminataabajoMarcianito",
-"speed": 48.0
-}, {
-"frames": [],
-"loop": 1,
-"name": &"CaminataarribaMarciano",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 12.0,
-"texture": ExtResource("7_7kjp6")
-}, {
-"duration": 12.0,
-"texture": ExtResource("12_nhtn7")
-}, {
-"duration": 12.0,
-"texture": ExtResource("13_dyai0")
-}, {
-"duration": 12.0,
-"texture": ExtResource("12_nhtn7")
-}, {
-"duration": 5.0,
-"texture": ExtResource("10_5vikf")
-}, {
-"duration": 2.0,
-"texture": ExtResource("11_hyvnv")
-}, {
-"duration": 5.0,
-"texture": ExtResource("10_5vikf")
->>>>>>> Stashed changes
 }],
 "loop": 1,
 "name": &"IdleAbajoMarcianito",
@@ -214,7 +140,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 12.0,
-<<<<<<< Updated upstream
 "texture": ExtResource("7_oxysp")
 }, {
 "duration": 12.0,
@@ -235,8 +160,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 12.0,
-=======
->>>>>>> Stashed changes
 "texture": ExtResource("2_pphqq")
 }, {
 "duration": 12.0,
@@ -274,16 +197,11 @@ scale = Vector2(3.5, 4.5)
 shape = SubResource("RectangleShape2D_1nmvi")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1015881917]
-position = Vector2(1, 0)
 scale = Vector2(0.5915, 0.5915)
 sprite_frames = SubResource("SpriteFrames_g4v7s")
-<<<<<<< Updated upstream
 animation = &"IdleArribaMarcianito"
 autoplay = "IdleCostadoMarciano"
 frame_progress = 0.65103614
-=======
-animation = &"CaminataarribaMarciano"
->>>>>>> Stashed changes
 
 [node name="PCMarcianito" type="Node2D" parent="." unique_id=70572793]
 script = ExtResource("3_mhgwd")
