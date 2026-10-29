@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://qctwjba5na7k"]
+
+[ext_resource type="Script" uid="uid://bicu2tpo7rtwi" path="res://puerta.gd" id="1_bek8y"]
+[ext_resource type="Texture2D" uid="uid://ck38nk8r8og2s" path="res://icon.svg" id="2_8gvf5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dd11d"]
+
+[node name="Puerta" type="StaticBody2D" unique_id=1553949359]
+script = ExtResource("1_bek8y")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=254575507]
+scale = Vector2(0.165, 0.165)
+texture = ExtResource("2_8gvf5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1997660063]
+shape = SubResource("RectangleShape2D_dd11d")

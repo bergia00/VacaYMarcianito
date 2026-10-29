@@ -1,34 +1,39 @@
 [gd_scene format=3 uid="uid://m18vsidyrup3"]
 
 [ext_resource type="Script" uid="uid://c3k0m0pmh76us" path="res://node_2d.gd" id="1_kdubu"]
-[ext_resource type="PackedScene" uid="uid://c7m5vou1rittf" path="res://mapa_2.tscn" id="1_q6r6c"]
+[ext_resource type="PackedScene" uid="uid://dwnrc2r0usfnx" path="res://mapa_3.tscn" id="2_ir8iy"]
 [ext_resource type="PackedScene" uid="uid://bxa6867hn1hh6" path="res://Marcianito.tscn" id="3_q6r6c"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="4_0hol4"]
 [ext_resource type="PackedScene" uid="uid://bhefatkxb8ywo" path="res://Vaca.tscn" id="4_kdubu"]
 [ext_resource type="Script" uid="uid://dmmljw6wgfyfs" path="res://area_2d.gd" id="6_d21ai"]
+[ext_resource type="PackedScene" uid="uid://ci4m6vqrauxml" path="res://boton.tscn" id="7_rj586"]
+[ext_resource type="PackedScene" uid="uid://qctwjba5na7k" path="res://puerta.tscn" id="8_4d7sh"]
+[ext_resource type="Script" uid="uid://dhait20c48ywg" path="res://boton2.gd" id="9_4d7sh"]
+[ext_resource type="PackedScene" uid="uid://bf6ofx5j0k4bg" path="res://fardo.tscn" id="10_ir8iy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dd11d"]
-size = Vector2(640, 104)
+size = Vector2(1054, 390)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_a6j62"]
+rough = true
 
 [node name="Node2D" type="Node2D" unique_id=1900721739]
 position = Vector2(0, -2)
 script = ExtResource("1_kdubu")
 
-[node name="Mapa2" parent="." unique_id=683148234 instance=ExtResource("1_q6r6c")]
+[node name="Mapa3" parent="." unique_id=1586256040 instance=ExtResource("2_ir8iy")]
 
 [node name="Marcianito" parent="." unique_id=788434798 instance=ExtResource("3_q6r6c")]
-z_index = 6
+z_index = 3
 position = Vector2(400, 170)
 scale = Vector2(0.56, 0.56)
-collision_mask = 4
+collision_mask = 84
 motion_mode = 1
 
 [node name="Vaca" parent="." unique_id=1966402237 instance=ExtResource("4_kdubu")]
 z_index = 3
 position = Vector2(680.00006, 178.00002)
 scale = Vector2(0.465, 0.465)
-collision_layer = 2
-collision_mask = 4
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1270818476]
 physics_interpolation_mode = 1
@@ -46,6 +51,7 @@ metadata/_custom_type_script = "uid://bd046eokvcnu2"
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1941009445]
 
 [node name="Label" type="Label" parent="CanvasLayer" unique_id=501139845]
+z_index = 50
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -53,18 +59,64 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 50
 horizontal_alignment = 1
+metadata/_edit_lock_ = true
 
-[node name="Area2D" type="Area2D" parent="." unique_id=260863787]
+[node name="Salida" type="Area2D" parent="." unique_id=260863787]
 position = Vector2(500, 500)
 collision_layer = 8
 collision_mask = 3
 script = ExtResource("6_d21ai")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1549812606]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Salida" unique_id=1549812606]
 z_index = 2
-position = Vector2(100, 466)
+position = Vector2(178, 609)
 shape = SubResource("RectangleShape2D_dd11d")
 
-[connection signal="Victoria" from="Area2D" to="." method="_on_area_2d_victoria"]
-[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
-[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
+[node name="Boton_1" parent="." unique_id=1564336467 instance=ExtResource("7_rj586")]
+position = Vector2(17, 540)
+
+[node name="Puerta" parent="Boton_1" unique_id=1553949359 instance=ExtResource("8_4d7sh")]
+z_index = 1
+position = Vector2(408.50003, -100)
+scale = Vector2(4.335, 0.5)
+collision_layer = 16
+collision_mask = 0
+script = null
+
+[node name="Boton_2" parent="." unique_id=293153558 instance=ExtResource("7_rj586")]
+position = Vector2(523, 825)
+script = ExtResource("9_4d7sh")
+
+[node name="Puerta" parent="Boton_2" unique_id=1529473176 instance=ExtResource("8_4d7sh")]
+z_index = 1
+position = Vector2(147, 28)
+scale = Vector2(5, 0.5)
+collision_layer = 16
+collision_mask = 0
+script = null
+
+[node name="Fardo" parent="." unique_id=1185414360 instance=ExtResource("10_ir8iy")]
+position = Vector2(998.99994, 418.99997)
+collision_layer = 64
+collision_mask = 87
+mass = 50.0
+physics_material_override = SubResource("PhysicsMaterial_a6j62")
+gravity_scale = 0.0
+lock_rotation = true
+linear_damp = 3.0
+
+[node name="Fardo2" parent="." unique_id=839521062 instance=ExtResource("10_ir8iy")]
+position = Vector2(427, 688)
+collision_layer = 64
+collision_mask = 87
+mass = 50.0
+physics_material_override = SubResource("PhysicsMaterial_a6j62")
+gravity_scale = 0.0
+lock_rotation = true
+linear_damp = 3.0
+
+[connection signal="Victoria" from="Salida" to="." method="_on_area_2d_victoria"]
+[connection signal="body_entered" from="Salida" to="Salida" method="_on_body_entered"]
+[connection signal="body_exited" from="Salida" to="Salida" method="_on_body_exited"]
+[connection signal="body_entered" from="Boton_1" to="Boton_1" method="_on_body_entered"]
+[connection signal="body_entered" from="Boton_2" to="Boton_2" method="_on_body_entered"]

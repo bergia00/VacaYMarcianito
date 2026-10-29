@@ -25,3 +25,4 @@ mono_crash.*.json
 # *.pck
 /.godot
 /.godot/editor
+.godot/editor/new_tile_set.tres-folding-ce4954442aeb4e9908eb5a13dfb0ebf7.cfg
