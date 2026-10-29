@@ -35,14 +35,14 @@ func Animar():
 			$AnimatedSprite2D.play("IdleCostadoMarciano")
 	
 	if  Input.is_action_pressed("Arriba"):
-		$AnimatedSprite2D.play("CaminataCostadoMarciano")
+		$AnimatedSprite2D.play("CaminataArribaMarcianito")
 	elif Input.is_action_just_released("Arriba"):
-			$AnimatedSprite2D.play("IdleCostadoMarciano")
+			$AnimatedSprite2D.play("IdleArribaMarcianito")
 	
 	if  Input.is_action_pressed("Abajo"):
-		$AnimatedSprite2D.play("CaminataCostadoMarciano")
+		$AnimatedSprite2D.play("CaminataAbajoMarcianito")
 	elif Input.is_action_just_released("Abajo"):
-			$AnimatedSprite2D.play("IdleCostadoMarciano")
+			$AnimatedSprite2D.play("IdleAbajoMarcianito")
 func Mover():
 	var direction := Input.get_vector("Izquierda", "Derecha", "Arriba", "Abajo")
 	velocity = direction * SPEED
